@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap</title>
+
+</head>
+<body>
+
+    <!--<div class="container">
+        <h1>Teste</h1> 
+               
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+              </svg>Novo</button>
+            <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse2-fill" viewBox="0 0 16 16">
+                <path d="M7.5.026C4.958.286 3 2.515 3 5.188V5.5h4.5V.026zm1 0V5.5H13v-.312C13 2.515 11.042.286 8.5.026zM13 6.5H3v4.313C3 13.658 5.22 16 8 16s5-2.342 5-5.188V6.5z"/>
+              </svg>Alterar</button>
+            <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save2-fill" viewBox="0 0 16 16">
+                <path d="M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6c-.314.418-.5.937-.5 1.5v6h-2a.5.5 0 0 0-.354.854l2.5 2.5a.5.5 0 0 0 .708 0l2.5-2.5A.5.5 0 0 0 10.5 7.5h-2v-6z"/>
+              </svg>Salvar</button>
+            <button type="button" class="btn btn-outline-primary">Sair</button>            
+          </div>         
+        </div>
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+              <th>Prc</th>
+              <th>Pagamento</th>
+              <th>Emissão</th>
+              <th>Vencimento</th>
+              <th>Valor</th>
+              <th>R$ Pago</th>
+              <th>R$ Resta</th>              
+            </thead>
+            <tbody>
+              <tr>
+                <td>4</td>
+                <td>Boleto</td>
+                <td>30/02/2022</td>
+                <td>30/06/2022</td>                
+                <td>456,00</td>
+                <td>0,00</td>
+                <td>456,00</td>
+                <td><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                  <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                  <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                  <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                </svg> Pagar</a></td>
+                <td><a href="">link</a></td>
+                <td><a href="">link</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+        <nav class="navbar bg-light ">
+          <div class="container-fluid bg-primary">
+            <a class="navbar-brand" style="color:white; font-weight:bold">Clientes</a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar Cliente" aria-label="Search">
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+          </div>
+        </nav>
+
+        <div class="container d-flex flex-wrap justify-content-evenly">
+          <div class="card border-dark mb-3 m-3 flex-wrap card-total" style="max-width: 20rem;">
+            <div class="card-header bg-primary d-flex justify-content-between valor">
+              <span>Valor: R$ 100,00</span> 
+              <span>Resta: R$ 100,00</span>             
+            </div>
+            <div class="card-body text-dark card-edit ">
+              <div class="d-flex justify-content-between">
+                <div class="text-center">
+                  <span>Emissão</span>
+                  <p class="card-text">28/02/2022</p>
+                </div>
+                <div class="text-center">
+                  <span>Vencimento</span>
+                  <p class="card-text">28/05/2022</p>
+                </div>
+              </div>              
+              <div class="d-flex justify-content-between m-3">
+                <div class="text-center">                  
+                  <p class="card-text">Form. Pag:<span> Dinheiro</span></p>
+                </div>
+                <div class="text-center">                  
+                  <p class="card-text">Parcela:<span> 06</span></p>
+                </div>
+              </div> 
+              <div class="d-flex justify-content-between m-3">
+                <div class="text-center">                  
+                  <p class="card-text">Chave:<span> 232154</span></p>
+                </div>
+                <div class="text-center">                  
+                  <p class="card-text">Contrato:<span> 25/2022</span></p>
+                </div>
+              </div>                        
+            </div>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-terminal-plus" viewBox="0 0 16 16">
+              <path d="M2 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V4a1 1 0 0 0-1-1H2Z"/>
+              <path d="M3.146 5.146a.5.5 0 0 1 .708 0L5.177 6.47a.75.75 0 0 1 0 1.06L3.854 8.854a.5.5 0 1 1-.708-.708L4.293 7 3.146 5.854a.5.5 0 0 1 0-.708ZM5.5 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5ZM16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z"/>
+            </svg> Detalhes</a>
+          </div>
+          
+        </div>
+        
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
