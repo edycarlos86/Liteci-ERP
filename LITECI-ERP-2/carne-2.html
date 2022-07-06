@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Promissória</title>
+</head>
+<body>
+    <nav class="navbar bg-light ">
+        <div class="container-fluid bg-primary">
+          <a class="navbar-brand" title="Início" style="color:white; font-weight:bold">Carnê</a>                 
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary"><a class="nav-link" href="contas-aberto-outras.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+              </svg> Voltar</a></button>
+            <button type="button" class="btn btn-primary"><a class="nav-link" href="contas-aberto.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg> Início</a></button>           
+          </div>         
+        </div>
+    </nav>
+    <div class="container d-flex flex-wrap justify-content-evenly"> <!--todos os card dentro deste container-->
+
+        <!--Card 1-->
+
+        <div class="card border-dark mb-3 m-3 flex-wrap card-total" style="max-width: 20rem;">
+          <div class="card-header bg-primary d-flex justify-content-between valor">
+            <div class="card-cima ">
+              <p class="card-text">Vencimento:<span>28/02/2022</span></p>                  
+            </div> 
+            <div class="card-cima">
+              <p>Resta:<span>R$100,00</span></p>
+            </div>            
+          </div>
+          <div class="card-body text-dark card-edit ">
+            <div class="d-flex justify-content-between">
+              <div class="text-center">
+                <p class="card-text">Emissão: <span>28/02/2022</span></p>                  
+              </div>
+              <div class="text-center mb-1">
+                <p class="card-text">Valor: <span>R$100,00</span></p>                  
+              </div>                
+            </div>              
+            <div class="d-flex justify-content-between">
+              <div class="text-center">                  
+                <p class="card-text">Controle/Prc:<span> 12352/06 </span></p>
+              </div>
+              <div class="text-center">           
+                <p class="card-text">Pago:<span>R$ 0,00</span></p>
+              </div>
+            </div> 
+            <div class="d-flex justify-content-between">
+              <div class="text-center">                  
+                <p class="card-text">F. Pag:<span> Boleto</span></p>
+              </div>
+              <div class="text-center">                  
+                <p class="card-text">Contrato:<span>12/2022</span></p>
+              </div>
+            </div>                     
+          </div>
+          <div class="d-flex justify-content-evenly flex-wrap m-1 mb-2">
+            
+            
+            <a class="icon-bt" href="#" title="Alterar" onclick="email()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+              </svg><br>E-mail</a>
+              <a class="icon-bt" href="#" title="Alterar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+                <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+              </svg><br>Imprimir</a>             
+          </div>
+        </div> <!--Fim do card-->               
+      </div> <!--Fim do container que recebe os cards-->
+
+      <script>
+        function email(){
+            var email = window.prompt('Enviar para o e-mail:')
+        }
+      </script>
+    
+</body>
+</html>
