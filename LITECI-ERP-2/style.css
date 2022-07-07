@@ -74,6 +74,10 @@ a.botao-excluir {
 
 /*CSS PAGINA CONTAS QUITADAS*/
 
+button.cor-quitadas {
+    background-color: #A3CFBB;
+}
+
 .card-header{
     background-color:#1C8C4D;
     text-align: center;
