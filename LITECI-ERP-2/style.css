@@ -72,6 +72,14 @@ a.botao-excluir {
     background-color: #8C2730;
 }
 
+button.cor-aberto {
+    background-color: #9EC5FE;
+}
+
+div.cor-aberto {
+    background-color:rgb(207,226,255) ;
+}
+
 /*CSS PAGINA CONTAS QUITADAS*/
 
 button.cor-quitadas {
