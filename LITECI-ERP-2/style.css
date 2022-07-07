@@ -149,6 +149,16 @@ a.icon-bt-canceladas:hover {
     background-color: rgb(66, 182, 248);
 }
 
+/*CSS PAGINA PAGAMENTOS CANCELADAS*/
+
+button.cor-pag-cancelados {
+    background-color: #FECBA1;
+}
+
+div.cor-pag-cancelados {
+    background-color:rgb(255,229,208);
+}
+
 
 
 
