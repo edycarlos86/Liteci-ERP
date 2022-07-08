@@ -159,8 +159,11 @@ div.cor-pag-cancelados {
     background-color:rgb(255,229,208);
 }
 
+/*Modal*/
 
-
+.bg-modal {
+    background-color: #FFC107;
+}
 
 
 
