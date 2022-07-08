@@ -107,21 +107,39 @@
                             <div><span>150,00</span></div>
                           </div>
                           
-                          <select class="form-select m-1" aria-label="Default select example">
-                            <option selected>Forma de Pagamento</option>
-                            <option value="1">Dinheiro</option>
-                            <option value="2">Cheque</option>
-                            <option value="3">Cartão</option>
-                            <option value="4">Transferência Bancario</option>
-                          </select> 
-
-
-
-                          <div class="input-group m-2">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Valor</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                          </div>                         
-                        </div>                        
+                          <div class="container mt-3 pt-3">
+                            <select class="form-select m-1" aria-label="Default select example">
+                              <option selected>Forma de Pagamento</option>
+                              <option value="1">Dinheiro</option>
+                              <option value="2">Cheque</option>
+                              <option value="3">Cartão</option>
+                              <option value="4">Transferência Bancario</option>
+                            </select>
+                          </div>  
+                          <div class="container">
+                            <form class="row g-3 needs-validation" novalidate>
+                              <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Juros</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="0,00" required>                                
+                              </div>
+                              <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Desconto</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="0,00" required>
+                              </div>
+                              <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Data</label>
+                                <input type="data" class="form-control" id="validationCustom01" value="07/06/2022" required>                                
+                              </div>
+                              <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Valor</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="0,00" required>
+                              </div>
+                                
+                            
+                            </form>
+                          </div>
+                        </div>                                                   
+                                              
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
                           <button type="button" class="btn btn-primary">Pagar</button>
