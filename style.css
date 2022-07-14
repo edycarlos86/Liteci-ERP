@@ -12,6 +12,10 @@ a.icone-nav {
     
 }
 
+span#nome-cliente-nav {
+    color: white;
+}
+
 
 
 
@@ -79,7 +83,7 @@ a.botao-excluir {
 }
 
 div.container-card {
-    margin-top: 60px;
+    margin-top: 90px;
     margin-bottom: 65px;
 }
 
