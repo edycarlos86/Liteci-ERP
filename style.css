@@ -3,13 +3,17 @@ body{
     padding: 0px;
 }
 
-
-p#cliente-nome {
-    color: #F2F2F2;
-    padding: 5px;
-    margin: 5px;
-
+a.icone-nav {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    border-radius: 4px;
+    
 }
+
+
+
 
 .valor span {
     font-size: 12px;
@@ -51,6 +55,8 @@ span{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349);
 }
 
+
+
 a.icon-bt, a.botao-excluir{
     text-align: center;
     font-size: 08px;
@@ -70,6 +76,11 @@ a.icon-bt:hover {
 
 a.botao-excluir {
     background-color: #8C2730;
+}
+
+div.container-card {
+    margin-top: 60px;
+    margin-bottom: 65px;
 }
 
 /*CSS PAGINA CONTAS QUITADAS*/
