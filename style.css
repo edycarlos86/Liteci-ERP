@@ -12,8 +12,9 @@ a.icone-nav {
     
 }
 
-span#nome-cliente-nav {
+span.cliente-nav {
     color: white;
+    font-weight: bold;
 }
 
 
@@ -86,6 +87,8 @@ div.container-card {
     margin-top: 90px;
     margin-bottom: 65px;
 }
+
+
 
 /*CSS PAGINA CONTAS QUITADAS*/
 
