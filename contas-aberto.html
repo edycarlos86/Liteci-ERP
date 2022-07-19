@@ -25,10 +25,11 @@
       <div class=" container mt-1">
         <select class="form-select text-center" id="selecao" onchange="atualizarSelect()"
           aria-label="Default select example">
-          <option selected value="1">CONTAS EM ABERTO</option>
-          <option value="2">CONTAS QUITADAS</option>
-          <option value="3">CONTAS CANCELADAS</option>
-          <option value="4">PAG. CANCELADOS</option>
+          <option selected value="1">ESCOLHA UMA OPÇÃO</option>
+          <option value="2">CONTAS EM ABERTO</option>
+          <option value="3">CONTAS QUITADAS</option>
+          <option value="4">CONTAS CANCELADAS</option>
+          <option value="5">PAG. CANCELADOS</option>
         </select>
       </div>
     </div>
@@ -64,16 +65,16 @@
       let optionValue = select.options[select.selectedIndex];
       let value = optionValue.value;
 
-      if (value == 1) {
+      if (value == 2) {
         for (let index = 0; index < 10; index++) {
           vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '');
           $('#div_lista').append(vdiv);
         }
-      } else if (value == 2) {
-        window.location.href = "contas-quitadas.html";
       } else if (value == 3) {
-        window.location.href = "contas-canceladas.html";
+        window.location.href = "contas-quitadas.html";
       } else if (value == 4) {
+        window.location.href = "contas-canceladas.html";
+      } else if (value == 5) {
         window.location.href = "contas-pag-canceladas.html";
       }
 
