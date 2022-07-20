@@ -136,7 +136,6 @@ function atualizarSelect() {
       '</svg><br>Cobrança</a>' +
 
       /*Inicio Modal Cobrança*/
-
           '<div class="modal fade" id="ModalCobranca" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">'+
             '<div class="modal-dialog modal-dialog-centered">'+
               '<div class="modal-content">'+
@@ -181,8 +180,7 @@ function atualizarSelect() {
                 '</div>'+
               '</div>'+
             '</div>'+
-          '</div>'+
-          
+          '</div>'+          
           /*fim Modal Cobrança*/
 
       '<a class="icon-bt" data-bs-toggle="collapse" href="#collapseCard_' + id + '" role="button" aria-expanded="false" aria-controls="collapseExample" style="width:50px;" title="Outras opções"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-terminal-plus" viewBox="0 0 16 16">' +
