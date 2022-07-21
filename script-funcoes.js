@@ -164,7 +164,7 @@ function atualizarSelect() {
             '<div class="modal-dialog modal-dialog-centered">'+
               '<div class="modal-content">'+
                 '<div class="modal-header bg-primary" style="color:white;">'+
-                  '<h5 class="modal-title" id="exampleModalToggleLabel2">Por E-mail</h5>'+
+                  '<h5 class="modal-title" id="exampleModalToggleLabel2">Cobrança\E-mail</h5>'+
                   '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
                 '</div>'+
                 '<div class="modal-body">'+
