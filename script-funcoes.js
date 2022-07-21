@@ -159,6 +159,7 @@ function atualizarSelect() {
               '</div>'+
             '</div>'+
           '</div>'+
+          /*Inicio Modal função e-mail*/
           '<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">'+
             '<div class="modal-dialog modal-dialog-centered">'+
               '<div class="modal-content">'+
@@ -180,8 +181,9 @@ function atualizarSelect() {
                 '</div>'+
               '</div>'+
             '</div>'+
-          '</div>'+          
-          /*fim Modal Cobrança*/
+          '</div>'+  
+          /*Fim Modal função e-mail*/        
+          /*Fim Modal Cobrança*/
 
       '<a class="icon-bt" data-bs-toggle="collapse" href="#collapseCard_' + id + '" role="button" aria-expanded="false" aria-controls="collapseExample" style="width:50px;" title="Outras opções"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-terminal-plus" viewBox="0 0 16 16">' +
       '<path d="M2 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V4a1 1 0 0 0-1-1H2Z" />' +
