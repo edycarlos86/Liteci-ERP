@@ -88,6 +88,10 @@ div.container-card {
     margin-bottom: 65px;
 }
 
+tr, th {
+    font-size: small;
+}
+
 
 
 
