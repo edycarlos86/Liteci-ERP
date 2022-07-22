@@ -23,6 +23,8 @@ function atualizarSelect() {
     //consultafinanceiro()
   }
 
+  
+
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
   function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato) {    
     return '<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">' +
