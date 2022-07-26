@@ -17,10 +17,11 @@
       <div class="container d-flex justify-content-center align-items-center mt-1">
         <span class="cliente-nav me-3" id="nome-cliente-nav"><span class="cliente-nav">001 -</span>José da Silva
           Júnior</span>
-        <a href="#" class="icone-nav"><img class="icone-nav" src="icon/person_search_black_24dp.svg"
+        <a  data-bs-target="#staticBackdrop" data-bs-toggle="modal" href="#" role="button" class="icone-nav" ><img class="icone-nav" src="icon/person_search_black_24dp.svg"
             alt="Pesquisar Cliente" title="Localizar Cliente">Cliente</a>
       </div>
-      <div class=" container mt-1">
+
+       <div class=" container mt-1">
         <select class="form-select text-center" id="selecao" onchange="atualizarSelect()"
           aria-label="Default select example">
           <option selected value="1">ESCOLHA UMA OPÇÃO</option>
@@ -32,6 +33,33 @@
       </div>
     </div>
   </nav>
+
+   <!--Inicio Modal Cliente-->
+   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Localizar Cliente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Nome</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Apelido</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!--Fim Modal Cliente-->
 
 
   <!--<div class="container d-flex justify-content-center p-1">
