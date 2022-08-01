@@ -14,12 +14,12 @@
 <body>
   <nav class="navbar navbar-dark bg-primary fixed-top">
     <div class="container d-flex justify-content-center">
-
       <div class="container d-flex justify-content-center align-items-center mt-1">
         <span class="cliente-nav me-3" id="nome-cliente-nav"><span class="cliente-nav">001 -
           </span>José da Silva Júnior</span>
-        <a href="#" class="icone-nav"><img class="icone-nav" src="icon/person_search_black_24dp.svg"
-            alt="Pesquisar Cliente" title="Localizar Cliente">Cliente</a>
+          <a data-bs-target="#ModalCliente" data-bs-toggle="modal" href="#" role="button" class="icone-nav"><img
+            class="icone-nav" src="icon/person_search_black_24dp.svg" alt="Pesquisar Cliente"
+            title="Localizar Cliente">Cliente</a>
       </div>
       <div class=" container mt-1">
         <select class="form-select text-center" id="selecao" onchange="atualizarSelect()"
@@ -32,13 +32,145 @@
         </select>
       </div>
     </div>
-
   </nav>
+
+  <!--Inicio Modal Cliente-->
+  <div class="modal fade" id="ModalCliente" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title" style="color:white;" id="staticBackdropLabel">Localizar Cliente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label fonte-pq" for="inlineRadio1">Nome\Razão</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label fonte-pq" for="inlineRadio2">Apelido\Fantasia</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label fonte-pq" for="inlineRadio3">Número</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <label class="form-check-label fonte-pq" for="inlineRadio4">Cidade</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            <label class="form-check-label fonte-pq" for="inlineRadio5">IE/RG</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+            <label class="form-check-label fonte-pq" for="inlineRadio6">CNPJ/CPF</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option7">
+            <label class="form-check-label fonte-pq" for="inlineRadio7">CTRL C.R</label>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Digite o nome do Cliente"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg></button>
+            </div>
+            <div class="mb-3 ms-2 align-items-center">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label fonte-pq" for="flexRadioDefault1">
+                  Ativo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label fonte-pq" for="flexRadioDefault2">
+                  Inativo
+                </label>
+              </div>
+            </div>
+          </div>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th class="table-secondary" scope="col">Cód.</th>
+                <th class="table-secondary" scope="col">Nome/Razão</th>
+                <th class="table-secondary" scope="col">Apelido</th>
+                <th class="table-secondary" scope="col">Ativo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>MARIO AUGUSTO SOARES SILVA ME</td>
+                <td>LITECI</td>
+                <td>S</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>JR ATACADO E VAREJISTA ME</td>
+                <td>JR ESTRELA</td>
+                <td>S</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>JOSÉ CARLOS DA SILVA CHAVEIRO ME</td>
+                <td>CHAVEIRO AVENIDA</td>
+                <td>S</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="border-top border-primary border-3">
+            <form class="d-flex flex-wrap justify-content-between  g-3">
+              <div class="col-sm-6 m-1">
+                <label for="inputZip" class="form-label fonte-pq">Endereço</label>
+                <input type="text" class="form-control fonte-pq" id="inputZip">
+              </div>
+              <div class="col-sm-2 m-1">
+                <label for="inputZip" class="form-label fonte-pq">Número</label>
+                <input type="text" class="form-control fonte-pq" id="inputZip">
+              </div>
+              <div class="col-sm-3 m-1">
+                <label for="inputZip" class="form-label fonte-pq">Cidade</label>
+                <input type="text" class="form-control fonte-pq" id="inputZip">
+              </div>
+              <div class="col-sm-3">
+                <label for="inputZip" class="form-label fonte-pq">CPF\CNPJ</label>
+                <input type="text" class="form-control fonte-pq" id="inputZip">
+              </div>
+              <div class="col-sm-3">
+                <label for="inputZip" class="form-label fonte-pq">Fone</label>
+                <input type="text" class="form-control fonte-pq" id="inputZip">
+              </div>
+              <div class="col-sm-5">
+                <label for="inputZip" class="form-label fonte-pq">E-Mail</label>
+                <input type="text" class="form-control fonte-pq" id="inputZip">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fim Modal Cliente-->
 
   <div class="container container-card d-flex flex-wrap justify-content-center" id="div_lista">
     <!--todos os card dentro deste container-->
 
   </div>
+
   <div class="fixed-bottom bg-light d-flex border border-primary p-2">
     <div class="col-md-3">
       <label for="">R$ Atrasado:</label>

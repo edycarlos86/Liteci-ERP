@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap5-2-0.css">    
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cliente - Contas em Aberto</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary fixed-top">
+    <div class="container d-flex justify-content-center">
+
+      <div class="container d-flex justify-content-center align-items-center mt-1">
+        <span class="cliente-nav me-3" id="nome-cliente-nav"><span class="cliente-nav">001 -
+          </span>José da Silva Júnior</span>
+        <a href="#" class="icone-nav"><img class="icone-nav" src="icon/person_search_black_24dp.svg"
+            alt="Pesquisar Cliente" title="Localizar Cliente">Cliente</a>
+      </div>
+      <div class=" container mt-1">
+        <select class="form-select text-center" id="selecao" onchange="atualizarSelect()"
+          aria-label="Default select example">
+          <option selected value="1">ESCOLHA UMA OPÇÃO</option>
+          <option value="2">CONTAS EM ABERTO</option>
+          <option value="3">CONTAS QUITADAS</option>
+          <option value="4">CONTAS CANCELADAS</option>
+          <option value="5">PAG. CANCELADOS</option>
+        </select>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="container container-card d-flex flex-wrap justify-content-center" id="div_lista">
+    <!--todos os card dentro deste container-->
+
+  </div>
+  <div class="fixed-bottom bg-light d-flex border border-primary p-2">
+    <div class="col-md-3">
+      <label for="">R$ Atrasado:</label>
+      <label for="">100,00</label>
+    </div>
+    <div class="col-md-2">
+      <label for="">R$ Total Aberto:</label>
+      <label for="">100,00</label>
+    </div>
+    <div class="col-md-2">
+      <label for="">R$ Disponível:</label>
+      <label for="">100,00</label>
+    </div>
+
+  </div>
+ 
+  <script src="JavaScript/jquery-3-3-1-slim.js"></script>    
+  <script src="JavaScript/popper2-11-5.js"></script>
+  <script src="JavaScript/bootstrap5-2-0.js"></script>
+  <script src="script-funcoes.js"></script>
+
+</body>
+
+</html>
