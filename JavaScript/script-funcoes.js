@@ -9,7 +9,7 @@ function atualizarSelect() {
 
     if (value == 2) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, 01/08/2022, 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, );
+        vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, '06/07/2022', '16:50:20', 1.00, 0);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
@@ -26,18 +26,17 @@ function atualizarSelect() {
   
 
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
-  function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal) {    
-    return  /*Card*/
-    '<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
+  function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
+    return /*Inicio Card*/'<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
       '<div class="card-header bg-primary d-flex justify-content-between valor">'+
         '<div class="form-check  d-flex align-items-center">'+
           '<input class="form-check-input bg-dark" type="checkbox" value="" id="Checkbox1">'+
         '</div>'+
         '<div class="card-cima d-flex align-items-center">'+
-          '<p class="card-text">Vencimento:<span>' + v_dtvencimento + '</span></p>'+
+          '<p class="card-text">Vencimento: <span>' + v_dtvencimento + '</span></p>'+
         '</div>'+
         '<div class="card-cima d-flex align-items-center">'+
-          '<p>Resta:<span>'+v_valorresta+'</span></p>'+
+          '<p>Resta: <span>'+v_valorresta+'</span></p>'+
         '</div>'+
       '</div>'+
       '<div class="card-body text-dark card-edit ">'+
@@ -54,15 +53,15 @@ function atualizarSelect() {
             '<p class="card-text">Controle/Prc: <span>'+v_chaveprc+'</span></p>'+
           '</div>'+
           '<div class="text-center">'+
-            '<p class="card-text">Pago:<span>'+v_valorpago+'</span></p>'+
+            '<p class="card-text">Pago: <span>'+v_valorpago+'</span></p>'+
           '</div>'+
         '</div>'+
         '<div class="d-flex justify-content-between">'+
           '<div class="text-center">'+
-            '<p class="card-text">F. Pag:<span>'+v_forma_pag+'</span></p>'+
+            '<p class="card-text">F. Pag: <span>'+v_forma_pag+'</span></p>'+
           '</div>'+
           '<div class="text-center">'+
-            '<p class="card-text">Contrato:<span>'+v_contrato+'</span></p>'+
+            '<p class="card-text">Contrato: <span>'+v_contrato+'</span></p>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -108,7 +107,7 @@ function atualizarSelect() {
                       '<label for="validationCustom02" class="form-label">Desconto</label>'+
                       '<input type="text" class="form-control" id="validationCustom02" value='+v_descontos+' required>'+
                     '</div>'+
-                    '<div class="col-md-3">'+
+                    '<div class="col-md-4">'+
                       '<label for="validationCustom01" class="form-label">Data</label>'+
                       '<input type="data" class="form-control" id="validationCustom01" value='+v_dtatual+' required>'+
                     '</div>'+
@@ -172,15 +171,15 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalToggleLabel2">Cobrança\E-mail</h5>'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel2">Cobrança/E-mail</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body">'+
-                '<fieldset class="d-flex flex-wrap justify-content-between border border-secundary">'+
+                '<fieldset class="d-flex flex-wrap  border border-secundary">'+
                   '<legend class="text-center ">Selecione qual deseja enviar</legend>'+
                   '<div class="form-check form-switch m-1 fonte-pq">'+
                     '<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked-link">'+
-                    '<label class="form-check-label" for="flexSwitchCheckChecked-link">Link cliente escolher Boleto\Cartão\Pix</label>'+
+                    '<label class="form-check-label" for="flexSwitchCheckChecked-link">Link cliente escolher Boleto/Cartão/Pix</label>'+
                   '</div>'+
                   '<div class="form-check form-switch m-1  fonte-pq">'+
                     '<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked-boleto">'+
@@ -223,7 +222,7 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalToggleLabel3">Cobrança\Boleto</h5>'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel3">Cobrança/Boleto</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body row justify-content-center ">'+
@@ -248,7 +247,7 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalToggleLabel4">Cobrança\Boleto\WhatsApp</h5>'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel4">Cobrança/Boleto/WhatsApp</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body">'+
@@ -267,7 +266,7 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalToggleLabel5">Cobrança\Pix</h5>'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel5">Cobrança/Pix</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body">'+
@@ -286,7 +285,7 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalToggleLabel6">Cobrança\Carnê</h5>'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel6">Cobrança/Carnê</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body">'+
@@ -305,7 +304,7 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalToggleLabel7">Cobrança\Promissória</h5>'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel7">Cobrança/Promissória</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body">'+
@@ -330,7 +329,7 @@ function atualizarSelect() {
           '<div class="modal-dialog modal-dialog-centered">'+
             '<div class="modal-content">'+
               '<div class="modal-header bg-primary" style="color:white;">'+
-                '<h5 class="modal-title" id="exampleModalLabel">Cobrança\Boleto\Alterar Parcela</h5>'+
+                '<h5 class="modal-title" id="exampleModalLabel">Cobrança/Boleto/Alterar Parcela</h5>'+
                 '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
               '</div>'+
               '<div class="modal-body">'+
@@ -361,7 +360,7 @@ function atualizarSelect() {
                       '<label for="validationCustom02" class="form-label">Desconto</label>'+
                       '<input type="text" class="form-control" id="validationCustom02" value='+v_descontos+' required>'+
                     '</div>'+
-                    '<div class="col-md-3">'+
+                    '<div class="col-md-4">'+
                       '<label for="validationCustom01" class="form-label">Vencimento</label>'+
                       '<input type="data" class="form-control" id="validationCustom01" value='+v_dtvencimento+' required>'+
                     '</div>'+
@@ -397,7 +396,7 @@ function atualizarSelect() {
               '</div>'+
               '<div class="modal-body text-center">'+
                 '<p>Confirmar Cancelamento?</p><br>'+
-                '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>'+
+                '<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Não</button>'+
                 '<button type="button" class="btn btn-danger">Sim</button>'+
               '</div>'+
             '</div>'+
@@ -405,7 +404,7 @@ function atualizarSelect() {
         '</div>'+
         /*Fim ModalCardCancelar*/
       '</div>'+
-      '<div class="collapse" id="collapseCard_'+id+'">
+      '<div class="collapse" id="collapseCard_'+id+'">'+
         '<div class="card card-body m-0 p-1">'+
           '<div class="d-flex justify-content-center flex-wrap">'+
             '<a class="icon-bt" style="width:50px;" href="#" title="Produtos" data-bs-target="#ModalProdutos-aberto" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" /></svg>Produtos</a>'+
@@ -415,7 +414,7 @@ function atualizarSelect() {
               '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">'+
                 '<div class="modal-content">'+
                   '<div class="modal-header bg-primary">'+
-                    '<h5 class="modal-title" style="color:white ;" id="staticBackdropLabel">Produtos</h5>'+
+                    '<h5 class="modal-title" style="color:white;" id="staticBackdropLabel">Produtos</h5>'+
                     '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
                   '</div>'+
                   '<div class="modal-body">'+
@@ -439,142 +438,106 @@ function atualizarSelect() {
                             '<td>'+v_valortotal+'</td>'+
                           '</tr>'+                          
                         '</tbody>'+
-                      </table>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                    <button type="button" class="btn bg-primary" style="color:white;" data-bs-dismiss="modal"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-printer" viewBox="0 0 16 16">
-                        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
-                        <path
-                          d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
-                      </svg> Imprimir</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--Fim Modal Produtos-->
+                      '</table>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="modal-footer">'+
+                    '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
+                    '<button type="button" class="btn bg-primary" style="color:white;" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" /><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" /></svg> Imprimir</button>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</div>'+
+            /*Fim Modal Produtos*/
 
-            <a class="icon-bt" style="width:50px;" href="#" title="Consultar Pagamentos"
-              data-bs-target="#ModalConsultarPagamento" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg"
-                width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-              </svg>Pagamentos</a>
+            '<a class="icon-bt" style="width:50px;" href="#" title="Consultar Pagamentos" data-bs-target="#ModalConsultarPagamento" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg>Pagamentos</a>'+
 
-            <!--Inicio Modal Consultar Pagamentos-->
-            <div class="modal fade" id="ModalConsultarPagamento" aria-hidden="true"
-              aria-labelledby="exampleModalToggleLabel8" tabindex="-1">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header bg-primary" style="color:white;">
-                    <h5 class="modal-title" id="exampleModalToggleLabel8">Consultar Pagamentos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
+            /*Inicio Modal Consultar Pagamentos*/
+            '<div class="modal fade" id="ModalConsultarPagamento" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
+              '<div class="modal-dialog modal-dialog-centered">'+
+                '<div class="modal-content">'+
+                  '<div class="modal-header bg-primary" style="color:white;">'+
+                    '<h5 class="modal-title" id="exampleModalToggleLabel8">Consultar Pagamentos</h5>'+
+                    '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+                  '</div>'+
+                  '<div class="modal-body">'+
+                    '<table class="table  table-bordered table-hover">'+
+                      '<thead>'+
+                        '<tr>'+
+                          '<th class="table-secondary" scope="col">Ctr</th>'+
+                          '<th class="table-secondary" scope="col">Data</th>'+
+                          '<th class="table-secondary" scope="col">Hora</th>'+
+                          '<th class="table-secondary" scope="col">R$ Juros</th>'+
+                          '<th class="table-secondary" scope="col">R$ Desc</th>'+
+                          '<th class="table-secondary" scope="col">R$ Pago</th>'+
+                        '</tr>'+
+                      '</thead>'+
+                      '<tbody class="table-group-divider">'+
+                        '<tr>'+
+                          '<th scope="row">'+v_chaveprc+'</th>'+
+                          '<td>'+v_dtpag+'</td>'+
+                          '<td>'+v_horapag+'</td>'+
+                          '<td>'+v_jurospag+'</td>'+
+                          '<td>'+v_descontopag+'</td>'+
+                          '<td>'+v_valorpago+'</td>'+
+                        '</tr>'+
+                      '</tbody>'+
+                    '</table>'+
 
-                    <table class="table  table-bordered table-hover">
-                      <thead>
-                        <tr>
-                          <th class="table-secondary" scope="col">Ctr</th>
-                          <th class="table-secondary" scope="col">Data</th>
-                          <th class="table-secondary" scope="col">Hora</th>
-                          <th class="table-secondary" scope="col">R$ Juros</th>
-                          <th class="table-secondary" scope="col">R$ Desc</th>
-                          <th class="table-secondary" scope="col">R$ Pago</th>
-                        </tr>
-                      </thead>
-                      <tbody class="table-group-divider">
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>22/07/2022</td>
-                          <td>16:10:04</td>
-                          <td>0,00</td>
-                          <td>0,00</td>
-                          <td>100,00</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>22/07/2022</td>
-                          <td>08:15:04</td>
-                          <td>0,00</td>
-                          <td>0,00</td>
-                          <td>150,00</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td colspan="1">22/07/2022</td>
-                          <td>10:10:04</td>
-                          <td>0,00</td>
-                          <td>0,00</td>
-                          <td>150,00</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    '<form class="d-flex flex-wrap justify-content-between  g-3 border-top border-primary border-3">'+
+                      '<div class="col-sm-3">'+
+                        '<label for="inputState" class="form-label fonte-pq">Pagamento</label>'+
+                        '<select id="inputState" class="form-select fonte-pq">'+
+                          '<option selected>Dinheiro</option>'+
+                          '<option>Boleto</option>'+
+                          '<option>Depósito</option>'+
+                          '<option>Pix</option>'+
+                          '<option>Cheque</option>'+
+                          '<option>Cartão</option>'+
+                        '</select>'+
+                      '</div>'+
+                      '<div class="col-sm-2">'+
+                        '<label for="inputZip" class="form-label fonte-pq">Usuário</label>'+
+                        '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                      '</div>'+
+                      '<div class="col-sm-2">'+
+                        '<label for="inputZip" class="form-label fonte-pq">Computador</label>'+
+                        '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                      '</div>'+
+                      '<div class="col-sm-2">'+
+                        '<label for="inputZip" class="form-label fonte-pq">Data Canc.</label>'+
+                        '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                      '</div>'+
+                      '<div class="col-sm-2">'+
+                        '<label for="inputZip" class="form-label fonte-pq">Hora Canc.</label>'+
+                        '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                      '</div>'+
+                      '<div class="col-sm-5">'+
+                        '<label for="inputZip" class="form-label fonte-pq">Obs.:</label>'+
+                        '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                      '</div>'+
+                      '<div class="col-sm-5">'+
+                        '<label for="inputZip" class="form-label fonte-pq">Obs. Sistema</label>'+
+                        '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                      '</div>'+
+                    '</form>'+
+                  '</div>'+
 
-                    <form class="d-flex flex-wrap justify-content-between  g-3 border-top border-primary border-3">
-                      <div class="col-sm-3">
-                        <label for="inputState" class="form-label fonte-pq">Pagamento</label>
-                        <select id="inputState" class="form-select fonte-pq">
-                          <option selected>Dinheiro</option>
-                          <option>Boleto</option>
-                          <option>Depósito</option>
-                          <option>Pix</option>
-                          <option>Cheque</option>
-                          <option>Cartão</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-2">
-                        <label for="inputZip" class="form-label fonte-pq">Usuário</label>
-                        <input type="text" class="form-control fonte-pq" id="inputZip">
-                      </div>
-                      <div class="col-sm-2">
-                        <label for="inputZip" class="form-label fonte-pq">Computador</label>
-                        <input type="text" class="form-control fonte-pq" id="inputZip">
-                      </div>
-                      <div class="col-sm-2">
-                        <label for="inputZip" class="form-label fonte-pq">Data Canc.</label>
-                        <input type="text" class="form-control fonte-pq" id="inputZip">
-                      </div>
-                      <div class="col-sm-2">
-                        <label for="inputZip" class="form-label fonte-pq">Hora Canc.</label>
-                        <input type="text" class="form-control fonte-pq" id="inputZip">
-                      </div>
-                      <div class="col-sm-5">
-                        <label for="inputZip" class="form-label fonte-pq">Obs.:</label>
-                        <input type="text" class="form-control fonte-pq" id="inputZip">
-                      </div>
-                      <div class="col-sm-5">
-                        <label for="inputZip" class="form-label fonte-pq">Obs. Sistema</label>
-                        <input type="text" class="form-control fonte-pq" id="inputZip">
-                      </div>
-                    </form>
+                  '<div class="modal-footer">'+
+                    '<button type="button" class="btn bg-primary" style="color:white;"data-bs-dismiss="modal">Estornar</button>'+
+                    '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+              /*Fim Modal Consultar Pagamentos*/
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
 
-                  </div>
+      /*Final do card*/      
+}  
 
-
-                  <div class="modal-footer">
-                    <button type="button" class="btn bg-primary" style="color:white;"
-                      data-bs-dismiss="modal">Estornar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                  </div>
-
-                </div>
-              </div>
-              <!--Fim Modal Consultar Pagamentos-->
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!--Final do card-->
-
-  }
-
- 
-  function get_div_canceladas() {
+function get_div_canceladas() {
 
 }
