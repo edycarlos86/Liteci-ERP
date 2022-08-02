@@ -9,13 +9,16 @@ function atualizarSelect() {
 
     if (value == 2) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, '06/07/2022', '16:50:20', 1.00, 0);
+        vdiv = get_div_em_aberto(index,index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
       window.location.href = "contas-quitadas.html";
     } else if (value == 4) {
-      window.location.href = "contas-canceladas.html";
+      for (let index = 0; index < 4; index++) {
+        vdiv = get_div_canceladas('02/06/2021', 100, '15/05/2021', 100, 0, 'DINHEIRO', '1235/02', 1002, 'MACARRÃO LIMOEIRO', 4, 'LITCASH', 12345, 'VT6548543215498654', 'DESKTOP-54HB25', 'JÚNIOR', '15:02:35', '05/05/2021');
+        $('#div_lista').append(vdiv);
+      }
     } else if (value == 5) {
       window.location.href = "contas-pag-canceladas.html";
     }
@@ -404,55 +407,56 @@ function atualizarSelect() {
         '</div>'+
         /*Fim ModalCardCancelar*/
       '</div>'+
-      '<div class="collapse" id="collapseCard_'+id+'">'+
+      '<div class="collapse" id="collapseCard_1">'+
         '<div class="card card-body m-0 p-1">'+
           '<div class="d-flex justify-content-center flex-wrap">'+
             '<a class="icon-bt" style="width:50px;" href="#" title="Produtos" data-bs-target="#ModalProdutos-aberto" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" /></svg>Produtos</a>'+
 
-            /*Modal Produtos*/
-            '<div class="modal fade" id="ModalProdutos-aberto" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
-              '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">'+
-                '<div class="modal-content">'+
-                  '<div class="modal-header bg-primary">'+
-                    '<h5 class="modal-title" style="color:white;" id="staticBackdropLabel">Produtos</h5>'+
-                    '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+            //Modal Produtos
+            '<div class="modal fade" id="ModalProdutos-aberto" data-bs-backdrop="static"  data-bs-keyboard="false"  tabindex="-1"'+ 
+             'aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
+               '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">'+
+                 '<div class="modal-content">'+
+                   '<div class="modal-header bg-primary">'+
+                     '<h5 class="modal-title" style="color:white;" id="staticBackdropLabel">Produtos</ h5>'+
+                     '<button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>'+
                   '</div>'+
                   '<div class="modal-body">'+
-                    '<div>'+
-                      '<table class="table table-striped table-bordered">'+
-                        '<thead>'+
-                          '<tr>'+
-                            '<th scope="col">Cód. Item</th>'+
-                            '<th scope="col">Descrição</th>'+
-                            '<th scope="col">Qtd</th>'+
-                            '<th scope="col">R$ Unit.</th>'+
-                            '<th scope="col">R$ Total</th>'+
-                          '</tr>'+
-                        '</thead>'+
-                        '<tbody class="table-group-divider">'+
-                          '<tr>'+
-                            '<th scope="row">'+v_coditem+'</th>'+
-                            '<td>'+v_descricaoitem+'</td>'+
-                            '<td>'+v_qtd+'</td>'+
-                            '<td>'+v_valorunitario+'</td>'+
-                            '<td>'+v_valortotal+'</td>'+
-                          '</tr>'+                          
-                        '</tbody>'+
-                      '</table>'+
-                    '</div>'+
-                  '</div>'+
-                  '<div class="modal-footer">'+
-                    '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
-                    '<button type="button" class="btn bg-primary" style="color:white;" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" /><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" /></svg> Imprimir</button>'+
-                  '</div>'+
-                '</div>'+
-              '</div>'+
+                     '<div>'+
+                       '<table class="table table-striped table-bordered">'+
+                         '<thead>'+
+                           '<tr>'+
+                             '<th scope="col">Cód. Item</th>'+
+                             '<th scope="col">Descrição</th>'+
+                             '<th scope="col">Qtd</th>'+
+                             '<th scope="col">R$ Unit.</th>'+
+                             '<th scope="col">R$ Total</th>'+
+                           '</tr>'+
+                         '</thead>'+
+                         '<tbody class="table-group-divider">'+
+                           '<tr>'+
+                             '<th scope="row">'+v_coditem+'</th>'+
+                             '<td>'+v_descricaoitem+'</td>'+
+                             '<td>'+v_qtd+'</td>'+
+                             '<td>'+v_valorunitario+'</td>'+
+                             '<td>'+v_valortotal+'</td>'+
+                           '</tr>'+                          
+                         '</tbody>'+
+                       '</table>'+
+                     '</div>'+
+                   '</div>'+
+                   '<div class="modal-footer">'+
+                     '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</ button>'+
+                     '<button type="button" class="btn bg-primary" style="color:white;"  data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20"  height="20" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path  d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" /><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2  0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0  2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1  1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1  1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0  1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" /></svg> Imprimir</button>'+
+                   '</div>'+
+                 '</div>'+
+               '</div>'+
             '</div>'+
-            /*Fim Modal Produtos*/
+            //Fim Modal Produtos
 
             '<a class="icon-bt" style="width:50px;" href="#" title="Consultar Pagamentos" data-bs-target="#ModalConsultarPagamento" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg>Pagamentos</a>'+
 
-            /*Inicio Modal Consultar Pagamentos*/
+            //Inicio Modal Consultar Pagamentos
             '<div class="modal fade" id="ModalConsultarPagamento" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
               '<div class="modal-dialog modal-dialog-centered">'+
                 '<div class="modal-content">'+
@@ -529,7 +533,7 @@ function atualizarSelect() {
                   '</div>'+
                 '</div>'+
               '</div>'+
-              /*Fim Modal Consultar Pagamentos*/
+              //Fim Modal Consultar Pagamentos
             '</div>'+
           '</div>'+
         '</div>'+
@@ -538,6 +542,131 @@ function atualizarSelect() {
       /*Final do card*/      
 }  
 
-function get_div_canceladas() {
+function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valororiginal, v_valorpago, v_forma_pag, v_chaveprc, v_coditem, v_descricaoitem, v_qtd, v_tipodoc, v_doc_fiscal, v_serieecf, v_nomepc, v_usuario, v_horacancelamento, v_dtvencimento) {
+  return '<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
+  '<div class="card-header bg-canceladas d-flex justify-content-between valor">'+
+    '<div class="card-cima d-flex align-items-center">'+
+      '<p class="card-text">Cancelado:<span>'+v_dtcancelamento+'</span></p>'+
+    '</div>'+
+    '<div class="card-cima d-flex align-items-center">'+
+      '<p>Resta:<span>'+v_valorresta+'</span></p>'+
+    '</div>'+
+  '</div>'+
+  '<div class="card-body text-dark card-edit ">'+
+    '<div class="d-flex justify-content-between">'+
+      '<div class="text-center">'+
+        '<p class="card-text">Emissão: <span>'+v_dtemissao+'</span></p>'+
+      '</div>'+
+      '<div class="text-center mb-1">'+
+        '<p class="card-text">Valor: <span>'+v_valororiginal+'</span></p>'+
+      '</div>'+
+    '</div>'+
+    '<div class="d-flex justify-content-between">'+
+      '<div class="text-center">'+
+        '<p class="card-text">Controle/Prc: <span>12352/06 </span></p>'+
+      '</div>'+
+      '<div class="text-center">'+
+        '<p class="card-text">Pago: <span>'+v_valorpago+'</span></p>'+
+      '</div>'+
+    '</div>'+
+    '<div class="d-flex justify-content-between">'+
+      '<div class="text-center">'+
+        '<p class="card-text">F. Pag: <span>'+v_forma_pag+'</span></p>'+
+      '</div>'+
+      '<div class="text-center">'+
+        '<p class="card-text">Contrato: <span>'+v_chaveprc+'</span></p>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+  '<div class="d-flex justify-content-center flex-wrap  m-1">'+
 
+    '<a class="icon-bt-canceladas" style="width:50px;" href="#" title="Produtos" data-bs-toggle="modal" data-bs-target="#ModalProdutos"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" /></svg>Produtos</a>'+
+
+    // Início Modal Produtos
+    '<div class="modal fade" id="ModalProdutos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
+      '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">'+
+        '<div class="modal-content">'+
+          '<div class="modal-header bg-canceladas">'+
+            '<h5 class="modal-title" style="color:white ;" id="staticBackdropLabel">Produtos</h5>'+
+            '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+          '</div>'+
+          '<div class="modal-body">'+
+            '<div>'+
+              '<table class="table table-striped table-bordered">'+
+                '<thead>'+
+                  '<tr>'+
+                    '<th scope="col">Cod. Item</th>'+
+                    '<th scope="col">Produto</th>'+
+                    '<th scope="col">Qtd</th>'+
+                  '</tr>'+
+                '</thead>'+
+                '<tbody class="table-group-divider">'+
+                  '<tr>'+
+                    '<th scope="row">'+v_coditem+'</th>'+
+                    '<td>'+v_descricaoitem+'</td>'+
+                    '<td>'+v_qtd+'</td>'+
+                  '</tr>'+
+                '</tbody>'+
+              '</table>'+
+            '</div>'+
+          '</div>'+
+          '<div class="modal-footer">'+
+            '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
+            '<button type="button" class="btn bg-canceladas" style="color:white;" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" /><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" /></svg> Imprimir</button>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    //Fim Modal Produtos
+
+    '<a class="icon-bt-canceladas" style="width:50px;" title="Detalhes" data-bs-toggle="modal" data-bs-target="#ModalDetalhes"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-terminal-plus" viewBox="0 0 16 16"><path d="M2 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V4a1 1 0 0 0-1-1H2Z" /><path d="M3.146 5.146a.5.5 0 0 1 .708 0L5.177 6.47a.75.75 0 0 1 0 1.06L3.854 8.854a.5.5 0 1 1-.708-.708L4.293 7 3.146 5.854a.5.5 0 0 1 0-.708ZM5.5 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5ZM16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z" /></svg><br>Detalhes</a>'+
+
+    // Início Modal Detalhes
+    '<div class="modal fade" id="ModalDetalhes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
+      '<div class="modal-dialog modal-dialog-centered">'+
+        '<div class="modal-content">'+
+          '<div class="modal-header bg-canceladas">'+
+            '<h5 class="modal-title" style="color:white ;" id="staticBackdropLabel">Detalhes do Cancelamento</h5>'+
+            '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+          '</div>'+
+          '<div class="modal-body row">'+
+            '<label class="fw-bold">Tipo/Doc: <span>'+v_tipodoc+'</span></label>'+
+            '<label class="fw-bold">Num. Doc. Fiscal: <span>'+v_doc_fiscal+'</span></label>'+
+            '<label class="fw-bold">Série/ECF: <Span>'+v_serieecf+'</Span></label>'+
+            '<label class="fw-bold">Computador: <span>'+v_nomepc+'</span></label>'+
+            '<label class="fw-bold">Usuário: <span>'+v_usuario+'</span></label>'+
+            '<label class="fw-bold">Hora Cancelamento: <span>'+v_horacancelamento+'</span></label>'+
+            '<label class="fw-bold">Vencimento: <span>'+v_dtvencimento+'</span></label>'+
+            '<label class="fw-bold">Valor: <label>'+v_valororiginal+'</label>'+
+          '</div>'+
+          '<div class="modal-footer">'+
+            '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    //Fim Modal Detalhes
+
+    '<a class="botao-excluir" style="width:50px;" href="#" title="Cancelar" data-bs-toggle="modal"   data-bs-target="#ModalCardCancelar3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" /></svg>Cancelar</a>'+
+  '</div>'+
+'</div>'+
+
+//Início ModalCardCancelar
+'<div class="modal fade" id="ModalCardCancelar3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
+  '<div class="modal-dialog modal-dialog-centered">'+
+    '<div class="modal-content">'+
+      '<div class="modal-header bg-primary" style="color:white;">'+
+        '<h5 class="modal-title" id="exampleModalToggleLabel8">Cancelar</h5>'+
+        '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+      '</div>'+
+      '<div class="modal-body text-center">'+
+        '<p>Confirmar Cancelamento?</p><br>'+
+        '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>'+
+        '<button type="button" class="btn btn-danger">Sim</button>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+'</div>';
+//Fim ModalCardCancelar
+//Final do card
 }
