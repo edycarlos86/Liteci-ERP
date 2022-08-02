@@ -1,3 +1,6 @@
+let id2 = 0
+id2 =id2++;
+
 //FUNÇAO DE ATUALIZAR O SELECT 
 
 function atualizarSelect() {
@@ -9,7 +12,7 @@ function atualizarSelect() {
 
     if (value == 2) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_em_aberto(index,index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
+        vdiv = get_div_em_aberto(index, id2, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
@@ -29,7 +32,7 @@ function atualizarSelect() {
   
 
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
-  function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
+  function get_div_em_aberto(id, id2, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
     return /*Inicio Card*/'<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
       '<div class="card-header bg-primary d-flex justify-content-between valor">'+
         '<div class="form-check  d-flex align-items-center">'+
@@ -661,7 +664,7 @@ function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valor
       '</div>'+
       '<div class="modal-body text-center">'+
         '<p>Confirmar Cancelamento?</p><br>'+
-        '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>'+
+        '<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Não</button>'+
         '<button type="button" class="btn btn-danger">Sim</button>'+
       '</div>'+
     '</div>'+

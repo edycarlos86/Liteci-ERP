@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap5-2-0.css">    
+    <link rel="stylesheet" href="css/style.css">
     <title>Cliente - Contas Quitadas</title>
 
 </head>
 <body>    
-        <nav class="navbar bg-light">
-          <div class="container-fluid bg-primary">
-            <a class="navbar-brand" style="color:white; font-weight:bold">Clientes - Financeiro</a>
-            
-            <div class="mostrar-cliente ">
-              <p id="cliente-nome"  ><span id="cliente-cod">528 </span>Maria José da Silva</p>
-            </div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-primary"><a class="nav-link" href="contas-aberto.html">Em Aberto</a></button>
-              <button type="button" class="btn btn-primary"><a class="nav-link" href="contas-quitadas.html">Quitadas</a></button>
-              <button type="button" class="btn btn-primary"><a class="nav-link" href="contas-canceladas.html">Canceladas</a></button>
-              <button type="button" class="btn btn-primary"><a class="nav-link" href="contas-pag-cancelados.html">Pag. Cancelados</a></button>
-            </div>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Pesquisar Cliente" aria-label="Search">
-              <button class="btn btn-primary" type="submit">Buscar</button>
-            </form>
+  <nav class="navbar navbar-dark bg-primary fixed-top">
+    <div class="container d-flex justify-content-center">
+      <div class="container d-flex justify-content-center align-items-center mt-1">
+        <span class="cliente-nav me-3" id="nome-cliente-nav"><span class="cliente-nav">001 -
+          </span>José da Silva Júnior</span>
+          <a data-bs-target="#ModalCliente" data-bs-toggle="modal" href="#" role="button" class="icone-nav"><img
+            class="icone-nav" src="icon/person_search_black_24dp.svg" alt="Pesquisar Cliente"
+            title="Localizar Cliente">Cliente</a>
+      </div>
+      <div class=" container mt-1">
+        <select class="form-select text-center" id="selecao" onchange="atualizarSelect()"
+          aria-label="Default select example">
+          <option selected value="1">ESCOLHA UMA OPÇÃO</option>
+          <option value="2">CONTAS EM ABERTO</option>
+          <option value="3">CONTAS QUITADAS</option>
+          <option value="4">CONTAS CANCELADAS</option>
+          <option value="5">PAG. CANCELADOS</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+        <div class="container d-flex justify-content-center p-1">
+          <div class="m-2">
+            <label for="data-inicial">Data Inicial:</label>
+            <input type="date" id="data-inicial" >
           </div>
-        </nav>
+          <div class="m-2">
+            <label for="data-final">Data Final:</label>
+            <input type="date" id="data-final">
+          </div>          
+          <a class="p-2" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg></a>
+        </div>
         
         <div class="container d-flex flex-wrap justify-content-evenly"> <!--todos os card dentro deste container-->
 
@@ -88,6 +104,9 @@
         </div>  
          
        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="JavaScript/jquery-3-3-1-slim.js"></script>    
+        <script src="JavaScript/popper2-11-5.js"></script>
+        <script src="JavaScript/bootstrap5-2-0.js"></script>
+        <script src="JavaScript/script-funcoes.js"></script>
 </body>
 </html>
