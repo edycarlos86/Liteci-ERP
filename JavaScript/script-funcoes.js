@@ -648,28 +648,10 @@ function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valor
         '</div>'+
       '</div>'+
     '</div>'+
-    //Fim Modal Detalhes
-
-    '<a class="botao-excluir" style="width:50px;" href="#" title="Cancelar" data-bs-toggle="modal"   data-bs-target="#ModalCardCancelar3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" /></svg>Cancelar</a>'+
-  '</div>'+
-'</div>'+
-
-//Início ModalCardCancelar
-'<div class="modal fade" id="ModalCardCancelar3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
-  '<div class="modal-dialog modal-dialog-centered">'+
-    '<div class="modal-content">'+
-      '<div class="modal-header bg-canceladas" style="color:white;">'+
-        '<h5 class="modal-title" id="exampleModalToggleLabel8">Cancelar</h5>'+
-        '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
-      '</div>'+
-      '<div class="modal-body text-center">'+
-        '<p>Confirmar Cancelamento?</p><br>'+
-        '<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Não</button>'+
-        '<button type="button" class="btn btn-danger">Sim</button>'+
-      '</div>'+
-    '</div>'+
+    //Fim Modal Detalhes    
   '</div>'+
 '</div>';
-//Fim ModalCardCancelar
+
+
 //Final do card
 }
