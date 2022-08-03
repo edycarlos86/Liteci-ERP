@@ -658,7 +658,7 @@ function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valor
 '<div class="modal fade" id="ModalCardCancelar3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
   '<div class="modal-dialog modal-dialog-centered">'+
     '<div class="modal-content">'+
-      '<div class="modal-header bg-primary" style="color:white;">'+
+      '<div class="modal-header bg-canceladas" style="color:white;">'+
         '<h5 class="modal-title" id="exampleModalToggleLabel8">Cancelar</h5>'+
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
       '</div>'+

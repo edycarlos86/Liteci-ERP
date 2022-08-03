@@ -104,8 +104,11 @@ tr, th {
 
 /*CSS PAGINA CONTAS QUITADAS*/
 
-.card-header{
-    background-color:#1C8C4D;
+.bg-quitadas{
+    background-color: #479F76;
+}
+
+.card-header{   
     text-align: center;
     font-weight: bold;
     color: white;
@@ -116,7 +119,7 @@ a.icon-bt-quitadas, a.botao-excluir-quitadas{
     font-size: 08px;
     text-decoration: none;
     margin: 1px;
-    background-color:#1C8C4D;
+    background-color:#479F76;
     color: aliceblue;
     border-radius: 5px;
     padding: 2px;
