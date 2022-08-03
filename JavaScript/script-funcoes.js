@@ -10,13 +10,22 @@ function atualizarSelect() {
     let optionValue = select.options[select.selectedIndex];
     let value = optionValue.value;
 
+    $("#div_pesquisa").html('');
+    let vdivpesquisa ='';
+    
+
     if (value == 2) {
       for (let index = 0; index < 10; index++) {
         vdiv = get_div_em_aberto(index, id2, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
-      window.location.href = "contas-quitadas.html";
+      vdivpesquisa = get_div_pesquisa_periodo
+      $('#div_pesquisa').append(vdivpesquisa);
+      for (let index = 0; index < 4; index++) {
+        vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
+        $('#div_lista').append(vdiv);
+      }
     } else if (value == 4) {
       for (let index = 0; index < 4; index++) {
         vdiv = get_div_canceladas('02/06/2021', 100, '15/05/2021', 100, 0, 'DINHEIRO', '1235/02', 1002, 'MACARRÃO LIMOEIRO', 4, 'LITCASH', 12345, 'VT6548543215498654', 'DESKTOP-54HB25', 'JÚNIOR', '15:02:35', '05/05/2021');
@@ -541,9 +550,230 @@ function atualizarSelect() {
           '</div>'+
         '</div>'+
       '</div>';
-
       /*Final do card*/      
 }  
+
+function get_div_pesquisa_periodo(){
+  return '<div class="container container-card d-flex justify-content-center p-1">'+
+  '<div class="m-2">'+
+  '<label for="data-inicial">Data Inicial: </label>'+
+  '<input type="date" id="data-inicial">'+
+'</div>'+
+'<div class="m-2">'+
+  '<label for="data-final">Data Final: </label>'+
+  '<input type="date" id="data-final">'+
+'</div>'+
+'<a class="p-2" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height=""   fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg></a>'+
+'</div>';
+}
+
+function get_div_quitadas(v_dtvencimento, v_valorresta, v_dtemissao, v_valororiginal, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag, v_valorpago){
+  return '<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
+  '<div class="card-header bg-quitadas d-flex justify-content-between valor">'+
+    '<div class="card-cima ">'+
+      '<p class="card-text">Vencimento: <span>'+v_dtvencimento+'</span></p>'+
+    '</div>'+
+    '<div class="card-cima">'+
+      '<p>Resta: <span>'+v_valorresta+'</span></p>'+
+    '</div>'+
+  '</div>'+
+  '<div class="card-body text-dark card-edit ">'+
+    '<div class="d-flex justify-content-between">'+
+      '<div class="text-center">'+
+        '<p class="card-text">Emissão: <span>'+v_dtemissao+'</span></p>'+
+      '</div>'+
+      '<div class="text-center mb-1">'+
+        '<p class="card-text">Valor: <span>'+v_valororiginal+'</span></p>'+
+      '</div>'+
+    '</div>'+
+    '<div class="d-flex justify-content-between">'+
+      '<div class="text-center">'+
+        '<p class="card-text">Controle/Prc: <span>'+v_chaveprc+'</span></p>'+
+      '</div>'+
+      '<div class="text-center">'+
+        '<p class="card-text">Pago: <span>'+v_valorpago+'</span></p>'+
+      '</div>'+
+    '</div>'+
+    '<div class="d-flex justify-content-between">'+
+      '<div class="text-center">'+
+        '<p class="card-text">F. Pag: <span>'+v_forma_pag+'</span></p>'+
+      '</div>'+
+      '<div class="text-center">'+
+        '<p class="card-text">Contrato: <span>'+v_contrato+'</span></p>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+  '<div class="d-flex justify-content-center flex-wrap m-1">'+
+    '<div class="d-flex flex-wrap justify-content-center m-1">'+
+
+      // Início Modal Recibo
+      '<div class="modal fade" id="ModalRecibo-Quitadas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
+        '<div class="modal-dialog modal-dialog-centered">'+
+          '<div class="modal-content">'+
+            '<div class="modal-header bg-quitadas" style="color:white;">'+
+              '<h5 class="modal-title" id="staticBackdropLabel">Quitadas/Recibo</h5>'+
+              '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+            '</div>'+
+            '<div class="modal-body">'+
+              'em desenvolvimento'+
+            '</div>'+
+            '<div class="modal-footer">'+
+              '<button type="button" class="btn btn-secondary" data-bs-target="#ModalPagamentos-Quitadas" data-bs-toggle="modal" data-bs-dismiss="modal">Sair</button>'+
+              '<button type="button" class="btn bg-quitadas" style="color:white;">Imprimir</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+      //Fim Modal Recibo
+
+      //Início Modal Estorno 
+      '<div class="modal fade" id="ModalEstorno-Quitadas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
+        '<div class="modal-dialog modal-dialog-centered">'+
+          '<div class="modal-content">'+
+            '<div class="modal-header bg-quitadas" style="color:white;">'+
+              '<h5 class="modal-title" id="staticBackdropLabel">Quitadas/Estornar</h5>'+
+              '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+            '</div>'+
+            '<div class="modal-body">'+
+              'em desenvolvimento'+
+            '</div>'+
+            '<div class="modal-footer">'+
+              '<button type="button" class="btn btn-secondary" data-bs-target="#ModalPagamentos-Quitadas" data-bs-toggle="modal" data-bs-dismiss="modal">Sair</button>'+
+              '<button type="button" class="btn bg-quitadas" style="color:white;">Ok</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+      //Fim Modal Estorno
+
+      '<a class="icon-bt-quitadas" style="width:50px;" href="#" title="Produtos" data-bs-toggle="modal" data-bs-target="#ModalProdutos-Quitadas"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" /></svg>Produtos</a>'+
+
+         //Modal Produtos
+         '<div class="modal fade" id="ModalProdutos-Quitadas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
+         '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">'+
+           '<div class="modal-content">'+
+             '<div class="modal-header bg-quitadas">'+
+               '<h5 class="modal-title" style="color:white ;" id="staticBackdropLabel">Produtos</h5>'+
+               '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+             '</div>'+
+             '<div class="modal-body">'+
+               '<div>'+
+                 '<table class="table table-striped table-bordered">'+
+                   '<thead>'+
+                     '<tr>'+
+                       '<th scope="col">Cód. Item</th>'+
+                       '<th scope="col">Descrição</th>'+
+                       '<th scope="col">Qtd</th>'+
+                       '<th scope="col">R$ Unit.</th>'+
+                       '<th scope="col">R$ Total</th>'+
+                     '</tr>'+
+                   '</thead>'+
+                   '<tbody class="table-group-divider">'+
+                     '<tr>'+
+                       '<th scope="row">'+v_coditem+'</th>'+
+                       '<td>'+v_descricaoitem+'</td>'+
+                       '<td>'+v_qtd+'</td>'+
+                       '<td>'+v_valorunitario+'</td>'+
+                       '<td>'+v_valortotal+'</td>'+
+                     '</tr>'+
+                   '</tbody>'+
+                 '</table>'+
+               '</div>'+
+             '</div>'+
+             '<div class="modal-footer">'+
+               '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
+               '<button type="button" class="btn bg-quitadas" style="color:white;" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" /><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" /></svg> Imprimir</button>'+
+             '</div>'+
+           '</div>'+
+         '</div>'+
+       '</div>'+
+       //Fim Modal Produtos
+
+      '<a class="icon-bt-quitadas" style="width:50px;" href="#" title="Consultar Pagamentos" data-bs-toggle="modal" data-bs-target="#ModalPagamentos-Quitadas"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg>Pagamentos</a>'+
+
+        //Inicio Modal Consultar Pagamentos
+        '<div class="modal fade" id="ModalPagamentos-Quitadas" aria-hidden="true"'+
+          'aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
+          '<div class="modal-dialog modal-dialog-centered">'+
+            '<div class="modal-content">'+
+              '<div class="modal-header bg-quitadas" style="color:white;">'+
+                '<h5 class="modal-title" id="exampleModalToggleLabel8">Consultar Pagamentos</h5>'+
+                '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+              '</div>'+
+              '<div class="modal-body">'+
+                '<table class="table  table-bordered table-hover">'+
+                  '<thead>'+
+                    '<tr>'+
+                      '<th class="table-secondary" scope="col">Ctr</th>'+
+                      '<th class="table-secondary" scope="col">Data</th>'+
+                      '<th class="table-secondary" scope="col">Hora</th>'+
+                      '<th class="table-secondary" scope="col">R$ Juros</th>'+
+                      '<th class="table-secondary" scope="col">R$ Desc</th>'+
+                      '<th class="table-secondary" scope="col">R$ Pago</th>'+
+                    '</tr>'+
+                  '</thead>'+
+                  '<tbody class="table-group-divider">'+
+                    '<tr>'+
+                      '<th scope="row">'+v_contrato+'</th>'+
+                      '<td>'+v_dtpag+'</td>'+
+                      '<td>'+v_horapag+'</td>'+
+                      '<td>'+v_jurospag+'</td>'+
+                      '<td>'+v_descontopag+'</td>'+
+                      '<td>'+v_valorpago+'</td>'+
+                    '</tr>'+
+                  '</tbody>'+
+                '</table>'+
+                '<form class="d-flex flex-wrap justify-content-between  g-3 border-top border-primary border-3">'+
+                  '<div class="col-sm-3">'+
+                    '<label for="inputState" class="form-label fonte-pq">Pagamento</label>'+
+                    '<select id="inputState" class="form-select fonte-pq">'+
+                      '<option selected>Dinheiro</option>'+
+                      '<option>Boleto</option>'+
+                      '<option>Depósito</option>'+
+                      '<option>Pix</option>'+
+                      '<option>Cheque</option>'+
+                      '<option>Cartão</option>'+
+                    '</select>'+
+                  '</div>'+
+                  '<div class="col-sm-2">'+
+                    '<label for="inputZip" class="form-label fonte-pq">Usuário</label>'+
+                    '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                  '</div>'+
+                  '<div class="col-sm-2">'+
+                    '<label for="inputZip" class="form-label fonte-pq">Computador</label>'+
+                    '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                  '</div>'+
+                  '<div class="col-sm-2">'+
+                    '<label for="inputZip" class="form-label fonte-pq">Data Canc.</label>'+
+                    '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                  '</div>'+
+                  '<div class="col-sm-2">'+
+                    '<label for="inputZip" class="form-label fonte-pq">Hora Canc.</label>'+
+                    '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                  '</div>'+
+                  '<div class="col-sm-5">'+
+                    '<label for="inputZip" class="form-label fonte-pq">Obs.:</label>'+
+                    '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                  '</div>'+
+                  '<div class="col-sm-5">'+
+                    '<label for="inputZip" class="form-label fonte-pq">Obs. Sistema</label>'+
+                    '<input type="text" class="form-control fonte-pq" id="inputZip">'+
+                  '</div>'+
+                '</form>'+
+              '</div>'+
+              '<div class="modal-footer">'+
+                '<button type="button" class="btn bg-quitadas" style="color:white;"            data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#ModalEstorno-Quitadas" title="Imprimir Recibo"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/> </svg> Estornar</button>'+
+                  '<button type="button" class="btn bg-quitadas" style="color:white;"             data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#ModalRecibo-Quitadas" title="Imprimir Recibo"><svg            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-receipt-cutoff" viewBox="0 0 16 16"><path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z" /><path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z" /></svg> Recibo</button>'+
+                '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+          //Fim Modal Consultar Pagamentos          
+    '</div>'+
+  '</div>'+
+  '</div>';
+  //Fim do card
+}
 
 function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valororiginal, v_valorpago, v_forma_pag, v_chaveprc, v_coditem, v_descricaoitem, v_qtd, v_tipodoc, v_doc_fiscal, v_serieecf, v_nomepc, v_usuario, v_horacancelamento, v_dtvencimento) {
   return '<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
@@ -651,7 +881,5 @@ function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valor
     //Fim Modal Detalhes    
   '</div>'+
 '</div>';
-
-
 //Final do card
 }
