@@ -22,11 +22,6 @@ function atualizarSelect() {
     } else if (value == 3) {
       vdivpesquisa = get_div_pesquisa_periodo
       $('#div_pesquisa').append(vdivpesquisa);
-      
-      $(document).ready(function() {
-      $('#div_lista').append('<div id="div_lista" class="container d-flex flex-wrap justify-content-center">'+vdiv+'</div>');
-    });
-
       for (let index = 0; index < 4; index++) {
         vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
         $('#div_lista').append(vdiv);
@@ -559,7 +554,7 @@ function atualizarSelect() {
 }  
 
 function get_div_pesquisa_periodo(){
-  return '<div class="container container-card d-flex justify-content-center fixed p-1">'+
+  return '<div class="container container-card d-flex justify-content-center p-1">'+
   '<div class="m-2">'+
   '<label for="data-inicial">Data Inicial: </label>'+
   '<input type="date" id="data-inicial">'+
