@@ -1,6 +1,3 @@
-let id2 = 0
-id2 =id2++;
-
 //FUNÇAO DE ATUALIZAR O SELECT 
 
 function atualizarSelect() {
@@ -16,12 +13,17 @@ function atualizarSelect() {
 
     if (value == 2) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_em_aberto(index, id2, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
+        vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
       vdivpesquisa = get_div_pesquisa_periodo
       $('#div_pesquisa').append(vdivpesquisa);
+      
+      /*$(document).ready(function() {
+      $('#div_lista').append('<div id="div_lista" class="container d-flex flex-wrap justify-content-center">'+vdiv+'</div>');
+    });*/
+
       for (let index = 0; index < 4; index++) {
         vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
         $('#div_lista').append(vdiv);
@@ -41,7 +43,7 @@ function atualizarSelect() {
   
 
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
-  function get_div_em_aberto(id, id2, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
+  function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
     return /*Inicio Card*/'<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
       '<div class="card-header bg-primary d-flex justify-content-between valor">'+
         '<div class="form-check  d-flex align-items-center">'+
@@ -419,13 +421,13 @@ function atualizarSelect() {
         '</div>'+
         /*Fim ModalCardCancelar*/
       '</div>'+
-      '<div class="collapse" id="collapseCard_1">'+
+      '<div class="collapse" id="collapseCard_'+id+'">'+
         '<div class="card card-body m-0 p-1">'+
           '<div class="d-flex justify-content-center flex-wrap">'+
-            '<a class="icon-bt" style="width:50px;" href="#" title="Produtos" data-bs-target="#ModalProdutos-aberto" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" /></svg>Produtos</a>'+
+            '<a class="icon-bt" style="width:50px;" href="#" title="Produtos" data-bs-target="#ModalProdutos-aberto_'+id+'" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" /></svg>Produtos</a>'+
 
             //Modal Produtos
-            '<div class="modal fade" id="ModalProdutos-aberto" data-bs-backdrop="static"  data-bs-keyboard="false"  tabindex="-1"'+ 
+            '<div class="modal fade" id="ModalProdutos-aberto_'+id+'" data-bs-backdrop="static"  data-bs-keyboard="false"  tabindex="-1"'+ 
              'aria-labelledby="staticBackdropLabel" aria-hidden="true">'+
                '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">'+
                  '<div class="modal-content">'+
@@ -466,10 +468,10 @@ function atualizarSelect() {
             '</div>'+
             //Fim Modal Produtos
 
-            '<a class="icon-bt" style="width:50px;" href="#" title="Consultar Pagamentos" data-bs-target="#ModalConsultarPagamento" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg>Pagamentos</a>'+
+            '<a class="icon-bt" style="width:50px;" href="#" title="Consultar Pagamentos" data-bs-target="#ModalConsultarPagamento_'+id+'" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg>Pagamentos</a>'+
 
             //Inicio Modal Consultar Pagamentos
-            '<div class="modal fade" id="ModalConsultarPagamento" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
+            '<div class="modal fade" id="ModalConsultarPagamento_'+id+'" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1">'+
               '<div class="modal-dialog modal-dialog-centered">'+
                 '<div class="modal-content">'+
                   '<div class="modal-header bg-primary" style="color:white;">'+
@@ -554,7 +556,7 @@ function atualizarSelect() {
 }  
 
 function get_div_pesquisa_periodo(){
-  return '<div class="container container-card d-flex justify-content-center p-1">'+
+  return '<div class="container container-card d-flex justify-content-center fixed p-1">'+
   '<div class="m-2">'+
   '<label for="data-inicial">Data Inicial: </label>'+
   '<input type="date" id="data-inicial">'+
