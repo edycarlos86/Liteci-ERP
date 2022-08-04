@@ -1,6 +1,11 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
+}
+
+.bg-nav {
+    background: rgb(242, 139, 48);
+    background: linear-gradient(315deg, rgba(242, 139, 48, 1) 0%, rgba(42, 57, 140, 1) 66%, rgba(5, 17, 242, 1) 100%);
 }
 
 a.icone-nav {
@@ -9,7 +14,7 @@ a.icone-nav {
     color: black;
     padding: 3px;
     border-radius: 4px;
-    
+
 }
 
 span.cliente-nav {
@@ -25,7 +30,8 @@ span.cliente-nav {
     margin: 0px 5px;
 }
 
-div.card-cima p,span{
+div.card-cima p,
+span {
     font-size: 12px;
     font-weight: normal;
     margin: 0px;
@@ -33,45 +39,46 @@ div.card-cima p,span{
 
 
 
-.card-edit p{
+.card-edit p {
     margin: 3px;
 }
 
 .card-text {
-    font-size:14px;
+    font-size: 14px;
     font-weight: bold;
-    
+
 }
 
-span{
+span {
     font-size: 12px;
     font-weight: normal;
-    
+
 }
 
-.card-header{
-    background-color:#0d6efd;
+.card-header {
+    background-color: #0d6efd;
     text-align: center;
     font-weight: bold;
     color: white;
 }
 
-.card-total{    
+.card-total {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349);
 }
 
 
 
-a.icon-bt, a.botao-excluir{
+a.icon-bt,
+a.botao-excluir {
     text-align: center;
     font-size: 08px;
     text-decoration: none;
     margin: 1px;
-    background-color:#0d6efd;
+    background-color: #0d6efd;
     color: aliceblue;
     border-radius: 5px;
     padding: 2px;
-    width: 40px;    
+    width: 40px;
 }
 
 a.icon-bt:hover {
@@ -88,11 +95,12 @@ div.container-card {
     margin-bottom: 65px;
 }
 
-tr, th {
+tr,
+th {
     font-size: x-small;
 }
 
-.fonte-pq{
+.fonte-pq {
     font-size: 10px;
 }
 
@@ -104,26 +112,27 @@ tr, th {
 
 /*CSS PAGINA CONTAS QUITADAS*/
 
-.bg-quitadas{
+.bg-quitadas {
     background-color: #479F76;
 }
 
-.card-header{   
+.card-header {
     text-align: center;
     font-weight: bold;
     color: white;
 }
 
-a.icon-bt-quitadas, a.botao-excluir-quitadas{
+a.icon-bt-quitadas,
+a.botao-excluir-quitadas {
     text-align: center;
     font-size: 08px;
     text-decoration: none;
     margin: 1px;
-    background-color:#479F76;
+    background-color: #479F76;
     color: aliceblue;
     border-radius: 5px;
     padding: 2px;
-    width: 40px;    
+    width: 40px;
 }
 
 a.icon-bt-quitadas:hover {
@@ -134,29 +143,24 @@ a.icon-bt-quitadas:hover {
 
 /*CSS PAGINA CONTAS CANCELADAS*/
 
-.bg-canceladas{
-    background-color:#E35D6A;    
+.bg-canceladas {
+    background-color: #E35D6A;
 }
 
-a.icon-bt-canceladas, a.botao-excluir-quitadas{
+a.icon-bt-canceladas,
+a.botao-excluir-quitadas {
     text-align: center;
     font-size: 08px;
     text-decoration: none;
     margin: 1px;
-    background-color:#E35D6A;
+    background-color: #E35D6A;
     color: aliceblue;
     border-radius: 5px;
     padding: 2px;
-    width: 40px;    
+    width: 40px;
 }
 
 a.icon-bt-canceladas:hover {
     color: rgb(66, 17, 201);
     background-color: rgb(66, 182, 248);
 }
-
-
-
-
-
-
