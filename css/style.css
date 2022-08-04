@@ -8,6 +8,11 @@ body {
     background: linear-gradient(315deg, rgba(242, 139, 48, 1) 0%, rgba(42, 57, 140, 1) 66%, rgba(5, 17, 242, 1) 100%);
 }
 
+.bg-nav2 {
+    background: rgb(212, 124, 72);
+    background: linear-gradient(315deg, rgba(212, 124, 72, 1) 0%, rgba(242, 139, 48, 1) 0%, rgba(5, 17, 242, 1) 51%, rgba(242, 139, 48, 1) 86%);
+}
+
 a.icone-nav {
     background-color: white;
     text-decoration: none;
