@@ -9,8 +9,8 @@ body {
 }
 
 .bg-nav2 {
-    background: rgb(242,139,48);
-    background: linear-gradient(315deg, rgba(242,139,48,1) 0%, rgba(212,124,72,1) 0%, rgba(22,26,228,1) 33%, rgba(5,17,242,1) 66%, rgba(242,139,48,1) 100%);
+    background: rgb(242, 139, 48);
+    background: linear-gradient(315deg, rgba(242, 139, 48, 1) 0%, rgba(212, 124, 72, 1) 0%, rgba(22, 26, 228, 1) 18%, rgba(5, 17, 242, 1) 84%, rgba(242, 139, 48, 1) 100%);
 }
 
 a.icone-nav {
