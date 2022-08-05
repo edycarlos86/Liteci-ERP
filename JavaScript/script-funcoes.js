@@ -27,7 +27,7 @@ function atualizarSelect() {
 
       for (let index = 0; index < 4; index++) {
         vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
-        $('#div_lista2').append(vdiv);
+        $('#div_lista').append(vdiv);
       }
     } else if (value == 4) {
       for (let index = 0; index < 4; index++) {
