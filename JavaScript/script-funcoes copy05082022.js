@@ -8,8 +8,8 @@ function atualizarSelect() {
     let optionValue = select.options[select.selectedIndex];
     let value = optionValue.value;
 
-    $("#nav_pesquisa").html('');
-    let vnavpesquisa ='';
+    $("#div_pesquisa").html('');
+    let vdivpesquisa ='';
     
 
     if (value == 2) {
@@ -18,8 +18,8 @@ function atualizarSelect() {
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
-      vnavpesquisa = get_nav_quitadas();
-      $('#nav_pesquisa').append(vnavpesquisa);
+      vdivpesquisa = get_div_pesquisa_periodo
+      $('#div_pesquisa').append(vdivpesquisa);
       
       /*$(document).ready(function() {
       $('#div_lista').append('<div id="div_lista" class="container d-flex flex-wrap justify-content-center">'+vdiv+'</div>');
@@ -568,37 +568,18 @@ function atualizarSelect() {
       /*Final do card*/      
 }  
 
-function get_nav_quitadas(){
-  return '<nav class="navbar navbar-dark bg-nav2 fixed-top" id="nav-pesquisa">'+
-  '<div class="container d-flex justify-content-center">'+
-  '<div class="container d-flex justify-content-center align-items-center mt-1">'+
-    '<span class="cliente-nav me-3" id="nome-cliente-nav"><span class="cliente-nav">001 -'+
-      '</span>José da Silva Júnior</span>'+
-    '<a data-bs-target="#ModalCliente" data-bs-toggle="modal" href="#" role="button" class="icone-nav"><img class="icone-nav" src="icon/person_search_black_24dp.svg" alt="Pesquisar Cliente" title="Localizar Cliente">Cliente</a>'+
-  '</div>'+
-  '<div class=" container mt-1">'+
-    '<select class="form-select text-center" id="selecao" onchange="atualizarSelect()"'+
-      'aria-label="Default select example">'+
-      '<option selected value="1">ESCOLHA UMA OPÇÃO</option>'+
-      '<option value="2">CONTAS EM ABERTO</option>'+
-      '<option value="3">CONTAS QUITADAS</option>'+
-      '<option value="4">CONTAS CANCELADAS</option>'+
-      '<option value="5">PAG. CANCELADOS</option>'+
-    '</select>'+
-  '</div>'+
+function get_div_pesquisa_periodo(){
+  return '<div class="container container-card2 d-flex justify-content-center fixed p-1">'+
+  '<div class="m-2">'+
+  '<label for="data-inicial">Data Inicial: </label>'+
+  '<input type="date" id="data-inicial">'+
 '</div>'+
-'<div class="container d-flex justify-content-center flex-wrap fonte-md" style="color:white;">'+
-  '<div class="mt-2">'+
-    '<label class="mt-2" for="data-inicial">Data Inicial:</label>'+
-    '<input type="date" id="data-inicial">'+
-  '</div>'+
-  '<div class="mt-2">'+
-    '<label class="mt-2 ms-1" for="data-final">Data Final:</label>'+
-    '<input type="date" id="data-final">'+
-  '</div>'+
-  '<a class="mt-2 ps-1" style="color:white ;" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />  </svg></a>'+
+'<div class="m-2">'+
+  '<label for="data-final">Data Final: </label>'+
+  '<input type="date" id="data-final">'+
 '</div>'+
-'</nav>';
+'<a class="p-2" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height=""   fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg></a>'+
+'</div>';
 }
 
 function get_div_quitadas(v_dtvencimento, v_valorresta, v_dtemissao, v_valororiginal, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag, v_valorpago){
