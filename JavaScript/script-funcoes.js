@@ -574,10 +574,10 @@ function get_nav_quitadas(){
     '<input type="date" id="data-inicial">'+
   '</div>'+
   '<div class="mt-2">'+
-    '<label class="mt-2 ms-1" for="data-final">Data Final:</label>'+
+    '<label class="mt-1" for="data-final">Data Final:</label>'+
     '<input type="date" id="data-final">'+
   '</div>'+
-  '<a class="mt-2 ps-1" style="color:white ;" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />  </svg></a>';
+  '<a class="mt-2" ps-1 style="color:white ;" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />  </svg></a>';
 }
 
 function get_div_quitadas(v_dtvencimento, v_valorresta, v_dtemissao, v_valororiginal, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag, v_valorpago){
