@@ -100,6 +100,11 @@ div.container-card {
     margin-bottom: 65px;
 }
 
+div.container-card2 {
+    margin-top: 100px;
+    
+}
+
 tr,
 th {
     font-size: x-small;
@@ -107,6 +112,10 @@ th {
 
 .fonte-pq {
     font-size: 10px;
+}
+
+.fonte-md {
+    font-size: 11px;
 }
 
 

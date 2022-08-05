@@ -2,6 +2,7 @@
 
 function atualizarSelect() {
     $("#div_lista").html('');
+    $("#div_lista2").html('');
     let vdiv = '';
     let select = document.querySelector('#selecao');
     let optionValue = select.options[select.selectedIndex];
@@ -26,7 +27,7 @@ function atualizarSelect() {
 
       for (let index = 0; index < 4; index++) {
         vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
-        $('#div_lista').append(vdiv);
+        $('#div_lista2').append(vdiv);
       }
     } else if (value == 4) {
       for (let index = 0; index < 4; index++) {
@@ -568,7 +569,7 @@ function atualizarSelect() {
 }  
 
 function get_div_pesquisa_periodo(){
-  return '<div class="container container-card d-flex justify-content-center fixed p-1">'+
+  return '<div class="container container-card2 d-flex justify-content-center fixed p-1">'+
   '<div class="m-2">'+
   '<label for="data-inicial">Data Inicial: </label>'+
   '<input type="date" id="data-inicial">'+
