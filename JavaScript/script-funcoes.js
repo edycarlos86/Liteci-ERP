@@ -571,11 +571,11 @@ function atualizarSelect() {
 function get_nav_quitadas(){
   return '<div class="mt-2">'+
     '<label class="mt-2" for="data-inicial">Data Inicial:</label>'+
-    '<input style="width:90px;" type="date" id="data-inicial">'+
+    '<input style="width:100px;" type="date" id="data-inicial">'+
   '</div>'+
   '<div class="mt-2">'+
     '<label class="mt-1" for="data-final">Data Final:</label>'+
-    '<input style="width:90px;" type="date" id="data-final">'+
+    '<input style="width:100px;" type="date" id="data-final">'+
   '</div>'+
   '<a class="mt-2" ps-1 style="color:white ;" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />  </svg></a>';
 }
