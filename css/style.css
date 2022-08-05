@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: white url('/img/logo.png') center center no-repeat fixed;
+    background: white url(/img/logo.png) center center no-repeat fixed;
     background-size: cover;
     background-size: 220px;
     }
