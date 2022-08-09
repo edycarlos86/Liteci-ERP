@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-<body>
+<body class="text-center">
 
 
 
   <input type="checkbox" class="dias" name="dias[]" value="1">1
   <input type="checkbox" class="dias" name="dias[]"  value="2">2
-  <input type="checkbox" class="dias m-2" name="dias[]"  value="3">3
-  <input type="checkbox" class="dias m-2" name="dias[]"  value="4">4
-  <input type="checkbox" class="dias m-2" name="dias[]"  value="5">5
-  <input type="checkbox" class="dias m-2" name="dias[]" value="6">6
+  <input type="checkbox" class="dias" name="dias[]"  value="3">3
+  <input type="checkbox" class="dias" name="dias[]"  value="4">4
+  <input type="checkbox" class="dias" name="dias[]"  value="5">5
+  <input type="checkbox" class="dias" name="dias[]" value="6">6
 
 
 <br><br>Resultado<input type="text" id="resultado" value="0">
@@ -39,7 +39,7 @@ for (let index = 0; index < 4; index++) {
 jQuery(function() {
   $(document).ready(function() {
     $(".dias, .m-2").change(function() {
-      var total = $('input[class="dias, m-2"]:checked').get().reduce(function(tot, el) {
+      var total = $('input[class="dias"]:checked').get().reduce(function(tot, el) {
         return tot + Number(el.value);
       }, 0);
       $('#resultado').val(total);
