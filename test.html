@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,9 +36,11 @@ for (let index = 0; index < 4; index++) {
 
 
 
+
+
 jQuery(function() {
   $(document).ready(function() {
-    $(".dias, .m-2").change(function() {
+    $(".dias").change(function() {
       var total = $('input[class="dias"]:checked').get().reduce(function(tot, el) {
         return tot + Number(el.value);
       }, 0);

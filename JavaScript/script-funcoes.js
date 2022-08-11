@@ -43,8 +43,8 @@ function atualizarSelect() {
 
   jQuery(function() {
     $(document).ready(function() {
-      $(".dias").change(function() {
-        var total = $('input[class="dias"]:checked').get().reduce(function(tot, el) {
+      $(".teste").change(function() {
+        var total = $('input[name="checkboxparcela"]:checked').get().reduce(function(tot, el) {
           return tot + Number(el.value);
         }, 0);
         $('#resultado').val(total);
