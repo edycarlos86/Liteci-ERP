@@ -41,16 +41,30 @@ function atualizarSelect() {
     //consultafinanceiro()
   }
 
-  jQuery(function() {
+  /*jQuery(function() {
     $(document).ready(function() {
-      $(".teste").change(function() {
+      $(".somar-check").change(function() {
         var total = $('input[name="checkboxparcela"]:checked').get().reduce(function(tot, el) {
           return tot + Number(el.value);
         }, 0);
         $('#resultado').val(total);
       });
     });
-  });
+  });*/
+
+  function somar() {
+    var result = $("input:checked");
+    var total = 0
+
+    for (var i = 0; i < result.length; i++) {
+        total = total + parseFloat(result[i].value);
+    }
+    $("#result").val(total.toFixed(2));
+}
+somar();
+$(":checkbox").click(somar);
+
+
   
 
   
@@ -60,7 +74,7 @@ function atualizarSelect() {
     return /*Inicio Card*/'<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
       '<div class="card-header bg-primary d-flex justify-content-between valor">'+
         '<div class="form-check d-flex align-items-center">'+
-          '<input class="form-check-input bg-dark" type="checkbox" value="" id="Checkbox1">'+
+          '<input class="form-check-input bg-dark somar-check" name="checkboxparcela" type="checkbox" value="2" id="Checkbox_'+id+'">'+
         '</div>'+
         '<div class="card-cima d-flex align-items-center">'+
           '<p class="card-text">Vencimento: <span>' + v_dtvencimento + '</span></p>'+
