@@ -52,29 +52,12 @@ function atualizarSelect() {
     });
   });*/
 
-  function somar() {
-    var result = $("input:checked");
-    var total = 0
-
-    for (var i = 0; i < result.length; i++) {
-        total = total + parseFloat(result[i].value);
-    }
-    $("#result").val(total.toFixed(2));
-}
-somar();
-$(":checkbox").click(somar);
-
-
-  
-
-  
-
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
   function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
     return /*Inicio Card*/'<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
       '<div class="card-header bg-primary d-flex justify-content-between valor">'+
         '<div class="form-check d-flex align-items-center">'+
-          '<input class="form-check-input bg-dark somar-check" name="checkboxparcela" type="checkbox" value="2" id="Checkbox_'+id+'">'+
+          '<input class="form-check-input bg-dark somar-check" id="preco" name="checkboxparcela" type="checkbox" value="10.00">'+
         '</div>'+
         '<div class="card-cima d-flex align-items-center">'+
           '<p class="card-text">Vencimento: <span>' + v_dtvencimento + '</span></p>'+
@@ -581,6 +564,19 @@ $(":checkbox").click(somar);
       '</div>';
       /*Final do card*/      
 }  
+
+function somar() {
+  var result = $("input:checked");
+  var total = 0
+
+  for (var i = 0; i < result.length; i++) {
+      total = total + parseFloat(result[i].value);
+  }
+  $("#result").val(total.toFixed(2));
+}
+
+somar();
+$(":checkbox").click(somar);
 
 function get_nav_quitadas(){
   return '<div class="mt-2">'+

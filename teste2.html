@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="JavaScript/jquery.min.js"></script>      
     <title>Document</title>
 </head>
 
@@ -15,9 +15,14 @@
         <input type="checkbox" name="valor" id="preco" value="3.00">3<br>
         <input type="checkbox" name="valor" id="preco" value="10.00">10 <br>
         <input type="checkbox" name="valor" id="preco" value="15.00">15 <br><br>
-        <input type="text" name="resultado" id="result" value="0.00">
-    </form>
+        <!--<input type="text" name="resultado" id="result" value="0.00">-->
+    </form>   
 
+      Total<input type="text" name="resultado" id="result" value="0.00">
+
+    
+    
+    
     <script>
         function somar() {
             var result = $("input:checked");
@@ -32,6 +37,14 @@
         $(":checkbox").click(somar);
 
     </script>
+
+ 
+<script src="JavaScript/jquery-3-3-1-slim.js"></script>
+<script src="JavaScript/popper2-11-5.js"></script>
+<script src="JavaScript/bootstrap5-2-0.js"></script>
+<script src="JavaScript/script-funcoes.js"></script>
+    
+    
     
 
 </body>
