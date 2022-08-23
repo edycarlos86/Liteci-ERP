@@ -25,17 +25,20 @@ function atualizarSelect() {
       $('#div_lista').append('<div id="div_lista" class="container d-flex flex-wrap justify-content-center">'+vdiv+'</div>');
     });*/
 
-      for (let index = 0; index < 4; index++) {
+      for (let index = 0; index < 10; index++) {
         vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 4) {
-      for (let index = 0; index < 4; index++) {
+      for (let index = 0; index < 10; index++) {
         vdiv = get_div_canceladas('02/06/2021', 100, '15/05/2021', 100, 0, 'DINHEIRO', '1235/02', 1002, 'MACARRÃO LIMOEIRO', 4, 'LITCASH', 12345, 'VT6548543215498654', 'DESKTOP-54HB25', 'JÚNIOR', '15:02:35', '05/05/2021');
         $('#div_lista').append(vdiv);
       }
     } else if (value == 5) {
-      window.location.href = "contas-pag-canceladas.html";
+      for (let index = 0; index < 10; index++) {
+        vdiv = get_div_pag_cancelado('23/08/2022', 50, '01/08/2022', 100, 50, 'DINHEIRO', '1255/02', 0, 0);
+        $('#div_lista').append(vdiv);
+      }
     }
 
     //consultafinanceiro()
@@ -906,4 +909,51 @@ function get_div_canceladas(v_dtcancelamento, v_valorresta, v_dtemissao, v_valor
   '</div>'+
 '</div>';
 //Final do card
+}
+
+function get_div_pag_cancelado(v_dtcancelamento, v_valorresta, v_dtemissao, v_valororiginal, v_valorpago, v_forma_pag, v_contrato, v_descontos, v_jurospag){
+  return '<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
+    '<div class="card-header bg-pagcancelado d-flex justify-content-between valor">'+
+      '<div class="card-cima d-flex align-items-center">'+
+        '<p class="card-text">Cancelado:<span>'+v_dtcancelamento+'</span></p>'+
+      '</div>'+
+      '<div class="card-cima d-flex align-items-center">'+
+        '<p>Resta: <span>'+v_valorresta+'</span></p>'+
+      '</div>'+
+    '</div>'+
+    '<div class="card-body text-dark card-edit ">'+
+      '<div class="d-flex justify-content-between">'+
+        '<div class="text-center">'+
+          '<p class="card-text">Emissão: <span>'+v_dtemissao+'</span></p>'+
+        '</div>'+
+        '<div class="text-center mb-1">'+
+          '<p class="card-text">Valor: <span>'+v_valororiginal+'</span></p>'+
+        '</div>'+
+      '</div>'+
+      '<div class="d-flex justify-content-between">'+
+        '<div class="text-center">'+
+          '<p class="card-text">Controle/Prc: <span>12352/06 </span></p>'+
+        '</div>'+
+        '<div class="text-center">'+
+          '<p class="card-text">Pago: <span>'+v_valorpago+'</span></p>'+
+        '</div>'+
+      '</div>'+
+      '<div class="d-flex justify-content-between">'+
+        '<div class="text-center">'+
+          '<p class="card-text">F. Pag: <span>'+v_forma_pag+'</span></p>'+
+        '</div>'+
+        '<div class="text-center">'+
+          '<p class="card-text">Contrato: <span>'+v_contrato+'</span></p>'+
+        '</div>'+
+      '</div>'+
+      '<div class="d-flex justify-content-between">'+
+        '<div class="text-center">'+
+          '<p class="card-text">R$ Desconto: <span>'+v_descontos+'</span></p>'+
+        '</div>'+
+        '<div class="text-center">'+
+          '<p class="card-text">R$ Juros: <span>'+v_jurospag+'</span></p>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  //Final do card
 }

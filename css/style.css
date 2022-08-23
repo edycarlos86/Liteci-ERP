@@ -187,3 +187,7 @@ a.icon-bt-canceladas:hover {
     color: rgb(66, 17, 201);
     background-color: rgb(66, 182, 248);
 }
+
+.bg-pagcancelado {
+    background-color: #6C757D;
+}
