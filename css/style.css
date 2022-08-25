@@ -191,3 +191,8 @@ a.icon-bt-canceladas:hover {
 .bg-pagcancelado {
     background-color: #6C757D;
 }
+
+footer {
+    color: blue;
+    font-weight: bold;
+}
