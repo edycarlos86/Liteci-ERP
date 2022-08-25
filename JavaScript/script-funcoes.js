@@ -14,29 +14,25 @@ function atualizarSelect() {
 
     if (value == 2) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
+        vdiv = get_div_em_aberto(index, 100, 20, '12/12/2022', '10/01/2022', '1255/01', 0, 'Dinheiro', '12543', 0, 0, '01/08/2022', 'pago na Liteci', 1050, 'Feijão Turquesa', 10, 6, 60,  '06/07/2022', '16:50:20', 1.00, 0);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 3) {
       vnavpesquisa = get_nav_quitadas();
       $('#nav_pesquisa').append(vnavpesquisa);
-      
-      /*$(document).ready(function() {
-      $('#div_lista').append('<div id="div_lista" class="container d-flex flex-wrap justify-content-center">'+vdiv+'</div>');
-    });*/
 
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, 215458, 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
+        vdiv = get_div_quitadas('02/05/2022', 50, '15/04/2022', 100, '1254/05', 100, 'PIX', 5421, 2564, 'TOMATE KG', 2, 4, 8, '25/05/2022', '14:15:52', 0, 0, 100);
         $('#div_lista').append(vdiv);
       }
     } else if (value == 4) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_canceladas('02/06/2021', 100, '15/05/2021', 100, 0, 'DINHEIRO', '1235/02', 1002, 'MACARRÃO LIMOEIRO', 4, 'LITCASH', 12345, 'VT6548543215498654', 'DESKTOP-54HB25', 'JÚNIOR', '15:02:35', '05/05/2021');
+        vdiv = get_div_canceladas('02/06/2021', 100, '15/05/2021', 100, 0, 'DINHEIRO', 1235, 1002, 'MACARRÃO LIMOEIRO', 4, 'LITCASH', 12345, 'VT6548543215498654', 'DESKTOP-54HB25', 'JÚNIOR', '15:02:35', '05/05/2021');
         $('#div_lista').append(vdiv);
       }
     } else if (value == 5) {
       for (let index = 0; index < 10; index++) {
-        vdiv = get_div_pag_cancelado('23/08/2022', 50, '01/08/2022', 100, 50, 'DINHEIRO', '1255/02', 0, 0);
+        vdiv = get_div_pag_cancelado('23/08/2022', 50, '01/08/2022', 100, 50, 'DINHEIRO', 1255, 0, 0);
         $('#div_lista').append(vdiv);
       }
     }
@@ -66,7 +62,7 @@ function atualizarSelect() {
   }
   
   somar();
-  $(":checkbox").click(somar);
+  $('input[name="valor"]:checkbox').click(somar);
 
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
   function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
@@ -578,6 +574,7 @@ function atualizarSelect() {
           '</div>'+
         '</div>'+
       '</div>';
+      
       /*Final do card*/      
 }  
 
