@@ -45,8 +45,6 @@ span {
     margin: 0px;
 }
 
-
-
 .card-edit p {
     margin: 3px;
 }
@@ -73,8 +71,6 @@ span {
 .card-total {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349);
 }
-
-
 
 a.icon-bt,
 a.botao-excluir {
@@ -126,11 +122,6 @@ th {
     margin-right: 5px;
     background-color: black;
 }
-
-
-
-
-
 
 
 /*CSS PAGINA CONTAS QUITADAS*/
@@ -194,5 +185,25 @@ a.icon-bt-canceladas:hover {
 
 footer {
     color: blue;
-    font-weight: bold;
+    font-weight: bold;    
+}
+
+footer input {
+    max-width: 70px;
+}
+
+footer .labelnum {
+    color: #6C757D;
+}
+
+footer .botao-footer {
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: #0d6efd;
+    
+}
+
+footer .botao-footer:hover{
+    background-color: green;
 }
