@@ -40,21 +40,20 @@ function atualizarSelect() {
     //consultafinanceiro()
   }
 
-  /*jQuery(function() {
+  jQuery(function() {
     $(document).ready(function() {
       $(".somar-check").change(function() {
-        var total = $('input[name="checkboxparcela"]:checked').get().reduce(function(tot, el) {
+        var total = $('input[name="valor"]:checked').get().reduce(function(tot, el) {
           return tot + Number(el.value);
         }, 0);
-        $('#resultado').val(total);
+        $('#result').val(total);
       });
     });
-  });*/  
+  });  
 
-  function somar() {
+  /*function somar() {
     var result = $('input[name="valor"]:checked');
-    var total = 0
-  
+    var total = 0  
     for (var i = 0; i < result.length; i++) {
         total = total + parseFloat(result[i].value);
     }
@@ -62,14 +61,14 @@ function atualizarSelect() {
   }
   
   somar();
-  $('input[name="valor"]:checkbox').click(somar);
+  $('input[name="valor"]:checkbox').click(somar);*/
 
   //FUNÇÃO MOSTRAR CONTAS EM ABERTO
   function get_div_em_aberto(id, v_valorresta, v_valororiginal, v_dtvencimento, v_dtemissao, v_chaveprc, v_valorpago, v_forma_pag, v_contrato, v_juros, v_descontos, v_dtatual, v_obspagamento, v_coditem, v_descricaoitem, v_qtd, v_valorunitario, v_valortotal, v_dtpag, v_horapag, v_jurospag, v_descontopag) {    
     return /*Inicio Card*/'<div class="card border-dark mb-2 m-1 flex-wrap card-total" style="max-width: 20rem;">'+
       '<div class="card-header bg-primary d-flex justify-content-between valor">'+
         '<div class="form-check d-flex align-items-center">'+
-          '<input type="checkbox" class="form-check-input bg-dark" id="preco" name="valor" value="10">'+
+          '<input type="checkbox" class="form-check-input bg-dark somar-check" id="preco" name="valor" value="10.00">'+
         '</div>'+
         '<div class="card-cima d-flex align-items-center">'+
           '<p class="card-text">Vencimento: <span>' + v_dtvencimento + '</span></p>'+
